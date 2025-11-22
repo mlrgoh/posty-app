@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New Post — Posty</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><a href="/">Posty</a></h1>
+        <a class="new" href="/new">+ New Post</a>
+      </header>
+
+      <main>
+        <form action="/new" method="post" class="post-form">
+          <label>Title
+            <input name="title" required />
+          </label>
+          <label>Content (Markdown)
+            <textarea name="content" rows="12" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit">Create Post</button>
+            <a href="/">Cancel</a>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

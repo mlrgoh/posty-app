@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Posty - Posts</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><a href="/">Posty</a></h1>
+        <a class="new" href="/new">+ New Post</a>
+      </header>
+
+      <main>
+        <% if (posts.length === 0) { %>
+          <p>No posts yet. Create one!</p>
+        <% } %>
+        <ul class="posts">
+          <% posts.forEach(post => { %>
+            <li>
+              <a class="post-link" href="/posts/<%= post.slug %>"><%= post.title %></a>
+              <span class="meta"><%= post.mtime.toLocaleString() %></span>
+            </li>
+          <% }) %>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>
